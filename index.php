@@ -2,9 +2,13 @@
 require_once __DIR__ . '/vendor/autoload.php';
 
 use ArunFung\TinyLaravel\Application\Application;
+use ArunFung\TinyLaravel\Contracts\Databases\DB;
+use ArunFung\TinyLaravel\Databases\MySql;
+use ArunFung\TinyLaravel\Databases\Oracle;
 
 $app  = new Application();
 
-$db = $app->make('db');
+$app->bind(DB::class, MySql::class);
 
+$db = $app->make(DB::class);
 echo $db->introduce();

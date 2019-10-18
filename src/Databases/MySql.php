@@ -1,7 +1,9 @@
 <?php
 namespace ArunFung\TinyLaravel\Databases;
 
-class MySql
+use ArunFung\TinyLaravel\Contracts\Databases\DB;
+
+class MySql implements DB
 {
     private $type ;
 

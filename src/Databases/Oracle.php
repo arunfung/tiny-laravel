@@ -1,7 +1,9 @@
 <?php
 namespace ArunFung\TinyLaravel\Databases;
 
-class Oracle
+use ArunFung\TinyLaravel\Contracts\Databases\DB;
+
+class Oracle implements DB
 {
     private $type ;
 
