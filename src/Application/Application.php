@@ -9,6 +9,7 @@ namespace ArunFung\TinyLaravel\Application;
 
 use ArunFung\TinyLaravel\Container\Container;
 use ArunFung\TinyLaravel\Databases\MySql;
+use ArunFung\TinyLaravel\Databases\Oracle;
 
 class Application extends Container
 {
@@ -21,7 +22,8 @@ class Application extends Container
     public function registerBaseService()
     {
         $bind = [
-            'db'   => MySql::class,
+//            'db'   => MySql::class,
+            'db'   => Oracle::class,
             // KernelContracts::class => Kernel::class,
         ];
         foreach ($bind as $key => $value) {

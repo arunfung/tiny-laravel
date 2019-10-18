@@ -1,8 +1,10 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
-use ArunFung\TinyLaravel\Databases\MySql;
-use ArunFung\TinyLaravel\Databases\Oracle;
 
-$mysql = new MySql();
-echo $mysql->introduce();
-$Oracle = new Oracle();
+use ArunFung\TinyLaravel\Application\Application;
+
+$app  = new Application();
+
+$db = $app->make('db');
+
+echo $db->introduce();
