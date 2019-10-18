@@ -1,0 +1,18 @@
+{
+    "name": "arunfung/tiny-laravel",
+    "description": "This is a small project modeled after laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Arun",
+            "email": "arunfung@gmail.com"
+        }
+    ],
+    "autoload":{
+        "psr-4":{
+            "ArunFung\\TinyLaravel\\":"./src/"
+        }
+    },
+    "require": {}
+}
