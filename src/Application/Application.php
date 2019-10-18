@@ -23,8 +23,8 @@ class Application extends Container
     public function registerBaseService()
     {
         $bind = [
-//            DB::class   => MySql::class,
-//            DB::class   => Oracle::class,
+            'db'   => MySql::class,
+            DB::class   => Oracle::class,
             // KernelContracts::class => Kernel::class,
         ];
         foreach ($bind as $key => $value) {
